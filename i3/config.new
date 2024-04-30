@@ -1,0 +1,78 @@
+
+#--------------------------------------------------
+# setup font
+#--------------------------------------------------
+#font pango:monospace 12
+#font pango:Noto Sans Mono  16px
+#font pango:JetBrains Mono Regular 12
+font pango:JetBrains Mono 12
+
+#--------------------------------------------------
+# setup monitors
+#--------------------------------------------------
+# set $fm HDMI-A-0
+# set $sm DVI-D-0
+# workspace 1 output $fm
+# workspace 2 output $fm
+# workspace 3 output $fm
+# workspace 4 output $fm
+# workspace 5 output $fm
+# workspace 6 output $fm
+# workspace 7 output $fm
+# workspace 8 output $fm
+# workspace 9 output $fm
+# workspace 10 output $sm
+# workspace 11 output $sm
+# workspace 12 output $sm
+# workspace 13 output $sm
+# workspace 14 output $sm
+# workspace 15 output $sm
+# workspace 16 output $sm
+# workspace 17 output $sm
+# workspace 18 output $sm
+# workspace 19 output $sm
+
+#--------------------------------------------------
+# setup keybindings
+#--------------------------------------------------
+include keybindings.conf
+
+#--------------------------------------------------
+# setup theme
+#--------------------------------------------------
+include theme-green.conf
+
+#--------------------------------------------------
+# launch polybar
+#--------------------------------------------------
+# setup PRIMARY_COLOR env variable for polybar.ini
+set $primary_color #55cc33
+# exec_always --no-startup-id COLOR_PRIMARY=$primary_color ~/.config/i3/launch-polybar.sh &
+exec_always --no-startup-id polybar-msg cmd quit
+exec_always --no-startup-id COLOR_PRIMARY=$primary_color polybar -c /home/kit/.config/i3/polybar.ini example 2>&1 | tee -a /tmp/polybar.log & disown &
+
+#--------------------------------------------------
+# autostart apps
+#--------------------------------------------------
+exec_always --no-startup-id pgrep -f '^polkit-gnome-authentication-agent' || /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+exec_always --no-startup-id pgrep -f '^nm-applet' || nm-applet &
+# exec_always --no-startup-id pgrep -f '^pasystray' || pasystray &
+exec_always --no-startup-id setxkbmap -layout pl &
+DISPLAY=:0.0 exec_always --no-startup-id nitrogen --restore &
+
+# Start XDG autostart .desktop files using dex. See also
+# https://wiki.archlinux.org/index.php/XDG_Autostart
+exec --no-startup-id dex --autostart --environment i3
+
+# The combination of xss-lock, nm-applet and pactl is a popular choice, so
+# they are included here as an example. Modify as you see fit.
+
+# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
+# screen before suspend. Use loginctl lock-session to lock your screen.
+# exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+
+# NetworkManager is the most popular way to manage wireless networks on Linux,
+# and nm-applet is a desktop environment-independent system tray GUI for it.
+# exec --no-startup-id nm-applet
+
+

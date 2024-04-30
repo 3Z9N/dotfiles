@@ -1,0 +1,5 @@
+#!/bin/sh
+
+MEMORY_USAGE=$(free | awk 'NR==2{print int($3*100/$2) "%"}')
+
+echo "${MEMORY_USAGE}"

@@ -1,0 +1,30 @@
+import = [
+    # "~/.config/alacritty/themes/kit1.toml"
+    "~/.config/alacritty/themes/campbell.toml"
+    # "~/.config/alacritty/themes/hyper.toml"
+    # "~/.config/alacritty/themes/iterm.toml"
+    # "~/.config/alacritty/themes/konsole_linux.toml"
+    # "~/.config/alacritty/themes/one_dark.toml"
+    # "~/.config/alacritty/themes/pencil_dark.toml"
+    # "~/.config/alacritty/themes/smoooooth.toml"
+    # "~/.config/alacritty/themes/tokyo-night.toml"
+    # "~/.config/alacritty/themes/xterm.toml"
+]
+
+
+[env]
+TERM = "tmux-256color"
+
+[font]
+size = 13.8
+
+[font.normal]
+family = "JetBrains Mono"
+# family = "Meslo LG L Regular"
+
+
+[keyboard]
+bindings = [
+    { key = "N", mods = "Control|Shift", action = "CreateNewWindow" },
+    { key = "F", mods = "Control|Shift", action = "ToggleFullscreen" },
+]
