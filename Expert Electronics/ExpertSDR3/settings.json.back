@@ -1,0 +1,12 @@
+{
+ "AutoStart": null,
+ "ExpertSync": {
+  "enable": false,
+  "port": 50040.0
+ },
+ "Graphics": null,
+ "Profile": {
+  "callsign": "Callsign",
+  "username": "User name"
+ }
+}
