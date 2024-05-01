@@ -60,10 +60,10 @@ keymap("n", "<leader>r", ":%s/<C-r><C-w>/",
 -- withouth bufferline
 keymap("n", "<leader><Right>", ":bnext<CR>")
 keymap("n", "<leader><Left>", ":bprev<CR>")
-keymap("n", "<M-Down>", ":bnext<CR>")
-keymap("n", "<M-Up>", ":bprev<CR>")
+keymap("n", "<leader><Down>", ":bnext<CR>")
+keymap("n", "<leader><Up>", ":bprev<CR>")
 keymap("n", "<leader>d", ":bdelete<CR>")
-keymap("n", "<M-d>", ":bdelete<CR>")
+-- keymap("n", "<M-d>", ":bdelete<CR>")
 
 
 -- keymap('n', '<leader>b', ':Neotree buffers reveal float<CR>')
