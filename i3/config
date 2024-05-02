@@ -283,3 +283,4 @@ smart_gaps on
 
 for_window [class="Pavucontrol"] floating enable, resize set 1000 600
 #for_window [class="pulse|ttrm|mus|fm|email"] floating enable, resize set 1000 600, move scratchpad, border pixel 0
+
