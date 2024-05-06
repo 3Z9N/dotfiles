@@ -8,7 +8,6 @@ local Themes = {
             -- load the colorscheme here
             -- vim.cmd([[colorscheme catppuccin]])
             require('myfunc').LoadTheme("catppuccin")
-
         end,
     },
     -- {
@@ -67,14 +66,14 @@ local Themes = {
         config = function()
             require("material").setup({
                 contrast = {
-                    terminal = false,           -- Enable contrast for the built-in terminal
-                    sidebars = true,            -- Enable contrast for sidebar-like windows ( for example Nvim-Tree )
-                    floating_windows = true,    -- Enable contrast for floating windows
-                    cursor_line = false,        -- Enable darker background for the cursor line
+                    terminal = false,            -- Enable contrast for the built-in terminal
+                    sidebars = true,             -- Enable contrast for sidebar-like windows ( for example Nvim-Tree )
+                    floating_windows = true,     -- Enable contrast for floating windows
+                    cursor_line = false,         -- Enable darker background for the cursor line
                     non_current_windows = false, -- Enable contrasted background for non-current windows
-                    filetypes = {},             -- Specify which filetypes get the contrasted (darker) background
+                    filetypes = {},              -- Specify which filetypes get the contrasted (darker) background
                 },
-                styles = {                      -- Give comments style such as bold, italic, underline etc.
+                styles = {                       -- Give comments style such as bold, italic, underline etc.
                     comments = { italic = true },
                     strings = { italic = true },
                     -- keywords = { --[[ underline = true ]] },
@@ -164,6 +163,10 @@ local Themes = {
         priority = 99, -- must be lover then colorscheme plugins
         -- version = "*",
         -- dependencies = 'nvim-tree/nvim-web-devicons',
+    },
+    {
+        "rose-pine/neovim",
+        name = "rose-pine"
     }
 }
 

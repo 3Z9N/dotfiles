@@ -142,3 +142,4 @@ keymap("v", "(", "<Esc>`>a)<Esc>`<i(<Esc>")
 
 -- add [,] around a selected block of text
 keymap("v", "[", "<Esc>`>a]<Esc>`<i[<Esc>")
+

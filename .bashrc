@@ -17,3 +17,6 @@ if [ -e $HOME/.bash_aliases ]; then
     source $HOME/.bash_aliases
 fi
 
+source /usr/share/fzf/key-bindings.bash
+source /usr/share/fzf/completion.bash
+

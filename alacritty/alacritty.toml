@@ -18,6 +18,7 @@ import = [
 [env]
 # TERM = "screen-256color"
 TERM = "xterm-256color"
+# TERM = "tmux-256color"
 
 [font]
 size = 13.8

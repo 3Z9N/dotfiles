@@ -16,7 +16,7 @@ return {
                     "clangd",
                     "cmake",
                     "gopls",
-                    "pylsp"
+                    "pylsp",
                 }
             })
         end
@@ -61,16 +61,16 @@ return {
             })
             lspconfig.pylsp.setup({
                 capabilities = lsp_capabilities,
-                settings = {
-                    pylsp = {
-                        plugins = {
-                            pycodestyle = {
-                                ignore = { 'W391' },
-                                maxLineLength = 100
-                            }
-                        }
-                    }
-                }
+                -- settings = {
+                --     pylsp = {
+                --         plugins = {
+                --             pycodestyle = {
+                --                 ignore = { 'W391' },
+                --                 maxLineLength = 100
+                --             }
+                --         }
+                --     }
+                -- }
             })
 
 
