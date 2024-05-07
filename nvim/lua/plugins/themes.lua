@@ -167,7 +167,13 @@ local Themes = {
     {
         "rose-pine/neovim",
         name = "rose-pine"
-    }
+    },
+    {
+        "bluz71/vim-nightfly-colors",
+        name = "nightfly",
+        lazy = false,
+        priority = 100
+    },
 }
 
 return Themes

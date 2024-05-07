@@ -84,6 +84,7 @@ return {
         cmp.setup({
             completion = {
                 completeopt = "menu,menuone,preview,noselect",
+                -- completeopt = "menu,menuone,preview",
             },
             snippet = { -- configure how nvim-cmp interacts with snippet engine
                 expand = function(args)
@@ -107,12 +108,12 @@ return {
                 { name = "path" },    -- file system paths
             }),
             -- configure lspkind for vs-code like pictograms in completion menu
-            --      formatting = {
-            --        format = lspkind.cmp_format({
-            --          maxwidth = 50,
-            --          ellipsis_char = "...",
-            --        }),
-            --      },
+                 -- formatting = {
+                 --   format = lspkind.cmp_format({
+                 --     maxwidth = 50,
+                 --     ellipsis_char = "...",
+                 --   }),
+                 -- },
         })
 
         cmp.setup.cmdline(":", {
@@ -123,5 +124,6 @@ return {
                 { name = "cmdline" },
             }),
         })
+
     end,
 }

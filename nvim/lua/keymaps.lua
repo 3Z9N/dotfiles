@@ -22,16 +22,15 @@ vim.api.nvim_create_autocmd('TextYankPost', {
     end,
 })
 
+
+-- Toggle relative or absolute number lines
 vim.cmd([[
-    " Relative or absolute number lines
     function! NumberToggle()
-        if(&nu == 1)
-            set nu!
-            set rnu
-        else
-            set nornu
-            set nu
-        endif
+    if(&relativenumber == 1)
+        set norelativenumber
+      else
+        set relativenumber
+    endif
     endfunction
 ]])
 
@@ -142,4 +141,16 @@ keymap("v", "(", "<Esc>`>a)<Esc>`<i(<Esc>")
 
 -- add [,] around a selected block of text
 keymap("v", "[", "<Esc>`>a]<Esc>`<i[<Esc>")
+
+-- paste in the insert mode
+-- keymap('i', '<C-v>', "<C-r>\"")
+-- keymap('i', '<C-v>', "<C-r>0")
+-- synchronized with the system clipboard
+keymap('i', '<C-V>', "<C-R>+")
+
+
+-- vim.cmd([[
+--     " iunmap <C-P>
+--     inoremap <C-P> <C-R>+
+-- ]])
 
