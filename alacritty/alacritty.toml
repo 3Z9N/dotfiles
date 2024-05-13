@@ -24,13 +24,15 @@ TERM = "xterm-256color"
 size = 13.8
 
 [font.normal]
-family = "JetBrains Mono"
-# family = "JetBrainsMonoNerdFont"
+#family = "JetBrains Mono"
+family = "JetBrainsMonoNerdFont"
 # family = "Meslo LG L Regular"
 
 
 [keyboard]
-bindings = [
-    { key = "N", mods = "Control|Shift", action = "CreateNewWindow" },
-    { key = "F", mods = "Control|Shift", action = "ToggleFullscreen" },
-]
+    bindings = [
+        { key = "N", mods = "Control|Shift", action = "CreateNewWindow" },
+        { key = "F", mods = "Control|Shift", action = "ToggleFullscreen" },
+    ]
+
+

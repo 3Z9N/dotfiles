@@ -32,7 +32,7 @@ GitInfo()
 
 # export PS1="$Bold$UserColor\u@\h$SeparColor: $DirColor\w \$(GitInfo)\n$UserColor>$NoColor "
 # export PS1="${Bold}${UserColor}\u@\h  ${DirColor}\w  \$(GitInfo)\n${UserColor}>${NoColor} "
-export PS1="${Bold}${UserColor}╭─\u@\h  ${DirColor}\w  \$(GitInfo)\n${UserColor}╰─> ${NoColor}"
+export PS1="${Bold}${UserColor}╭─\u@\h  ${DirColor}\w  \$(GitInfo)\n${Bold}${UserColor}╰─> ${NoColor}"
 
 #-------------------------------------------
 #   environment variables setup

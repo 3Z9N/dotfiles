@@ -17,6 +17,7 @@ return {
                     "cmake",
                     "gopls",
                     "pylsp",
+                    "rust_analyzer",
                 }
             })
         end
@@ -72,7 +73,16 @@ return {
                 --     }
                 -- }
             })
-
+            lspconfig.rust_analyzer.setup({
+                capabilities = lsp_capabilities,
+                -- settings = {
+                --     ['rust-analyzer'] = {
+                --         diagnostics = {
+                --             enable = false,
+                --         }
+                --     }
+                -- }
+            })
 
 
             vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
