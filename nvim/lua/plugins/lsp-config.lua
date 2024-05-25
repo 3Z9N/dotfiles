@@ -15,7 +15,7 @@ return {
                     "bashls",
                     "clangd",
                     "cmake",
-                    "gopls",
+                    -- "gopls",
                     "pylsp",
                     "rust_analyzer",
                 }
@@ -34,9 +34,9 @@ return {
             lspconfig.cmake.setup({
                 capabilities = lsp_capabilities
             })
-            lspconfig.gopls.setup({
-                capabilities = lsp_capabilities
-            })
+            -- lspconfig.gopls.setup({
+            --     capabilities = lsp_capabilities
+            -- })
             lspconfig.lua_ls.setup({
                 capabilities = lsp_capabilities,
                 settings = {

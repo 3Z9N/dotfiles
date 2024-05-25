@@ -90,7 +90,7 @@ local Themes = {
                     -- "eyeliner",
                     -- "fidget",
                     -- "flash",
-                    -- "gitsigns",
+                    "gitsigns",
                     -- "harpoon",
                     -- "hop",
                     -- "illuminate",
@@ -110,7 +110,7 @@ local Themes = {
                     -- "sneak",
                     "telescope",
                     -- "trouble",
-                    -- "which-key",
+                    "which-key",
                     -- "nvim-notify",
                 },
             })

@@ -63,6 +63,7 @@ keymap("n", "<leader><Down>", ":bnext<CR>")
 keymap("n", "<leader><Up>", ":bprev<CR>")
 keymap("n", "<leader>d", ":bdelete<CR>")
 -- keymap("n", "<M-d>", ":bdelete<CR>")
+keymap("n", "<Tab>", ":bnext<CR>")
 
 
 -- keymap('n', '<leader>b', ':Neotree buffers reveal float<CR>')
@@ -97,7 +98,7 @@ keymap("v", "<", "<gv")                           -- unindent, stay on visual mo
 
 -- vim.keymap.set("n", "<F8>", "<cmd>lua RunCmd()<CR>", {})
 -- vim.keymap.set("n", "<C-a>", "<cmd>lua require('myfunc').GoToErrorFromClipboard()<CR>", {})
-keymap("n", "<C-a>", ":ThemeLoaderSelect<CR>")
+keymap("n", "<leader>cs", ":ThemeLoaderSelect<CR>")
 
 -- vim.keymap.set("i", "<C-O>", "<esc> <C-O>:stopinsert<CR>", {silent = true})
 -- inoremap <silent> <Esc> <C-O>:stopinsert<CR>
@@ -124,8 +125,11 @@ keymap("v", "<C-c>", ":Commentary<cr>")
 -- GitGutter
 --      n    [c    :GitGutterPrevHunk<cr>
 --      n    ]c    :GitGutterNextHunk<cr>
-keymap("n", "[v", ":GitGutterPreviewHunk<cr>")
-keymap("n", "]v", ":GitGutterPreviewHunk<cr>")
+-- keymap("n", "[v", ":GitGutterPreviewHunk<cr>")
+-- keymap("n", "]v", ":GitGutterPreviewHunk<cr>")
+
+-- Gitsigns
+keymap("n", "<leader>v", ":Gitsigns preview_hunk<cr>")
 
 -- add single quotes around a selected block of text
 keymap("v", "\'", "<Esc>`>a\'<Esc>`<i\'<Esc>")
@@ -146,7 +150,8 @@ keymap("v", "[", "<Esc>`>a]<Esc>`<i[<Esc>")
 -- keymap('i', '<C-v>', "<C-r>\"")
 -- keymap('i', '<C-v>', "<C-r>0")
 -- synchronized with the system clipboard
-keymap('i', '<C-V>', "<C-R>+")
+-- keymap('i', '<C-V>', "<C-R>+")
+keymap('i', '<C-V>', " <backspace><esc>pa")
 
 
 -- vim.cmd([[

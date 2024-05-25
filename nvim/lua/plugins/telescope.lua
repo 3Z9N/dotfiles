@@ -21,6 +21,17 @@ return {
                         ["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
                     },
                 },
+                -- layout_strategy = "vertical",
+                -- layout_config = {
+                --     vertical = {
+                --         width = 0.9,
+                --         height = 0.95,
+                --         -- preview_height = 0.5
+                --         preview_cutoff = 10,
+                --     },
+                --     -- other layout configuration here
+                --     horizontal = { width = 0.95, preview_cutoff = 10, },
+                -- },
             },
         })
 
