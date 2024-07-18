@@ -12,7 +12,7 @@
 #exec_always --no-startup-id "DISPLAY=:0.0 feh --bg-fill ~/Pobrane/wallpaper/1776179.png &"
 
 # setup theme
-include theme-green.conf
+# include theme-green.conf
 
 # color for polybar
 #set $primary_color #55cc33
@@ -225,16 +225,25 @@ bindsym $mod+Ctrl+Down resize shrink height 1 px or 1 ppt
 #        position top
 #}
 
+include theme-green.conf
+
 # bar {
-#     status_command i3blocks -c ~/.config/i3/i3blocks-1.conf
-#     # status_command python ~/.config/i3/status.py
-#     workspace_min_width 25
-#     colors {
-#         focused_workspace  #907000 #6F5F00 #ffffff
-#         active_workspace   #333333 #5f676a #ffffff
-#         inactive_workspace #28282c #28282c #888888
-#         urgent_workspace   #900000 #900000 #ffffff
-#     }
+    # status_command i3blocks -c ~/.config/i3/i3blocks-1.conf
+    # status_command python ~/.config/i3/status.py
+    # workspace_min_width 25
+#     # colors {
+#     #     focused_workspace  #907000 #6F5F00 #ffffff
+#     #     active_workspace   #333333 #5f676a #ffffff
+#     #     inactive_workspace #28282c #28282c #888888
+#     #     urgent_workspace   #900000 #900000 #ffffff
+#     # }
+
+#     # colors {
+#     #     focused_workspace  #907000 #6F5F00 #ffffff
+#     #     active_workspace   #333333 #5f676a #ffffff
+#     #     inactive_workspace #28282c #28282c #888888
+#     #     urgent_workspace   #900000 #900000 #ffffff
+#     # }
 # }
 
 # exec_always --no-startup-id $HOME/.config/i3/launch-polybar.sh
@@ -249,11 +258,19 @@ bindsym $mod+Shift+BackSpace move scratchpad
 bindsym $mod+BackSpace scratchpad show
 
 # application key bindings
-bindsym $mod+c exec --no-startup-id ~/.local/bin/code
-bindsym $mod+e exec --no-startup-id mousepad
-bindsym $mod+t exec --no-startup-id thunar
-bindsym $mod+w exec --no-startup-id firefox
-bindsym $mod+Ctrl+w exec --no-startup-id firefox --private-window
+# bindsym $mod+c exec --no-startup-id ~/.local/bin/code
+bindsym $mod+k exec --no-startup-id setxkbmap -layout pl &
+bindsym $mod+e exec --no-startup-id mousepad &
+bindsym $mod+t exec --no-startup-id thunar &
+bindsym $mod+w exec --no-startup-id firefox &
+bindsym $mod+Ctrl+w exec --no-startup-id firefox --private-window &
+bindsym $mod+s exec --no-startup-id maim -q -s -f png > ~/screenshot.png &
+bindsym $mod+Shift+s exec --no-startup-id feh ~/screenshot.png &
+
+# bindsym $mod+v exec --no-startup-id bash -c "cd ~/quickemu && quickemu --vm ubuntu-22.04.conf --public-dir /home/kit/share"
+bindsym $mod+v exec --no-startup-id bash -c "$HOME/run-ubuntu.sh" &
+# for_window [class="qemu-system-x86_64"] exec i3-msg resize set width 2000 &
+
 
 # autostart apps and move to scratchpad
 #exec_always --no-startup-id pgrep -f '^alacritty --class xxx,xxx' || alacritty --class xxx,xxx &
@@ -271,15 +288,16 @@ bindsym $mod+Ctrl+w exec --no-startup-id firefox --private-window
 #--------------------------------------------------
 # setup window rules
 #--------------------------------------------------
-for_window [class="^.*"] border pixel 2
-new_window 1pixel
+# for_window [class="^.*"] border pixel 2
+# new_window 1pixel
 default_orientation auto
-default_floating_border none
-default_floating_border normal 0
+# default_floating_border none
+# default_floating_border normal 0
 hide_edge_borders smart
 gaps inner 6
 gaps outer 0
 smart_gaps on
+default_border pixel 3
 
 for_window [class="Pavucontrol"] floating enable, resize set 1000 600
 #for_window [class="pulse|ttrm|mus|fm|email"] floating enable, resize set 1000 600, move scratchpad, border pixel 0

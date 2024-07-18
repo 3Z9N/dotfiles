@@ -43,6 +43,7 @@ export PS1="${Bold}${UserColor}\u@\h  ${DirColor}\w  \$(GitInfo)\n${Bold}${UserC
 
 # export CCACHE_DIR=/devel/.ccache
 # export XDG_CACHE_HOME=$HOME/.cache
+export HISTFILESIZE=10000
 export COLORTERM=truecolor
 export EDITOR=nvim
 export QT_QPA_PLATFORMTHEME=qt6ct

@@ -34,6 +34,7 @@ opt.cursorline = true
 vim.cmd("filetype plugin on")
 -- opt.pumheight = 10
 -- opt.pumblend = 10
+opt.shortmess:append("I") -- disable splashscreen
 
 
 -- Behaviour
